@@ -107,99 +107,99 @@ public class practice {
     public String sex;
     public String sn;
     public static String test;
-//    public practice(String name, int age, String sex, String sn) {
-//        this.name = name;
-//        this.age = age;
-//        this.sex = sex;
-//        this.sn = sn;
+
+    public practice(String name, int age, String sex, String sn) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.sn = sn;
+    }
+
+    @Override
+    public String toString() {
+        return "姓名：" + name + "\n年龄：" + age + "\n性别：" + sex + "\n身份证号：" + sn;
+    }
+
+//    public void eat() {
+//        System.out.println(name);
 //    }
 //
-//    @Override
-//    public String toString() {
-//        return "姓名：" + name + "\n年龄：" + age + "\n性别：" + sex + "\n身份证号：" + sn;
+//    public static void eta2() {
+//        System.out.println("test");
 //    }
-
-    public void eat() {
-        System.out.println(name);
-    }
-
-    public static void eta2() {
-        System.out.println("test");
-    }
-
-    public static class cat extends practice {
-        public String name;
-        public String str;
-        public static String sta;
+//
+//    public static class cat extends practice {
+//        public String name;
+//        public String str;
+//        public static String sta;
+//        @Override
+//        public void eat() {
+//            System.out.println("name");
+//        }
+//
+//        public static void eta2() {
+//            System.out.println(sta);
+//        }
+//
+//        public void str() {
+//            System.out.println(str);
+//        }
+//    }
+//    public static void main(String[] args) {
+//        practice a = new cat();//向上转型
+//        cat b = (cat) a;//向下转型
+//        System.out.println(b.name);
+//        a.eat();
+//        eta2();
+//        b.str();
+//    }
+//}
+        public static class practice1 extends practice{
+            private String id;
+            private String department;
+            public practice1(String name, int age, String sex, String sn, String id, String department) {
+                super(name, age, sex, sn);
+                this.id=id;
+                this.department=department;
+            }
+            @Override
+            public String toString(){
+                return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n学号：" + id + "\n所学专业：" + department;
+            }
+                public static class test extends practice1{
+                private String code;
+                    public test(String name,int age,String sex,String sn,String id,String department,String code){
+                    super(name,age,sex,sn,id,department);
+                    this.code=code;
+                }
+                @Override
+                public String toString(){
+                    return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n学号：" + super.id + "\n所学专业：" + super.department+"\ncode:"+code;
+                }
+                }
+        }
+        public static class practice2 extends practice{
+            private int tYear;
+            private String tDept;
+        public practice2(String name, int age, String sex, String sn, int tYear, String tDept){
+            super(name,age,sex,sn);
+            this.tYear=tYear;
+            this.tDept=tDept;
+        }
         @Override
-        public void eat() {
-            System.out.println("name");
-        }
-
-        public static void eta2() {
-            System.out.println(sta);
-        }
-
-        public void str() {
-            System.out.println(str);
+        public String toString(){
+            return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n教龄：" + tYear + "\n所教专业：" + tDept;
         }
     }
-    public static void main(String[] args) {
-        practice a = new cat();//向上转型
-        cat b = (cat) a;//向下转型
-        System.out.println(b.name);
-        a.eat();
-        eta2();
-        b.str();
+    public static void main(String[] args){
+        practice a1=new practice1("王丽丽", 23, "女", "410521198902145589", "00001", "计算机应用与技术");
+        System.out.println(a1);
+        practice a2=new practice2("张文", 30, "男", "410521198203128847", 5, "计算机应用与技术");
+        System.out.println(a2);
+        practice1 a3=new practice1.test("王丽丽", 23, "女", "410521198902145589", "00001", "计算机应用与技术","fqwuhfiufirfiurhf324234");
+        System.out.println(a3);
     }
 }
-//        public static class practice1 extends practice{
-//            private String id;
-//            private String department;
-//            public practice1(String name, int age, String sex, String sn, String id, String department) {
-//                super(name, age, sex, sn);
-//                this.id=id;
-//                this.department=department;
-//            }
-//            @Override
-//            public String toString(){
-//                return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n学号：" + id + "\n所学专业：" + department;
-//            }
-//                public static class test extends practice1{
-//                private String code;
-//                    public test(String name,int age,String sex,String sn,String id,String department,String code){
-//                    super(name,age,sex,sn,id,department);
-//                    this.code=code;
-////                    this.id=id;
-////                    this.department=department;
-//                }
-//                @Override
-//                public String toString(){
-//                    return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n学号：" + super.id + "\n所学专业：" + super.department+"\ncode:"+code;
-//                }
-//                }
-//        }
-//        public static class practice2 extends practice{
-//            private int tYear;
-//            private String tDept;
-//        public practice2(String name, int age, String sex, String sn, int tYear, String tDept){
-//            super(name,age,sex,sn);
-//            this.tYear=tYear;
-//            this.tDept=tDept;
-//        }
-//        @Override
-//        public String toString(){
-//            return "姓名：" + name + "\n年龄：" + age + "\n性别:" + sex + "\n身份证号：" + sn + "\n教龄：" + tYear + "\n所教专业：" + tDept;
-//        }
-//    }
-//    public static void main(String[] args){
-//        practice a1=new practice1("王丽丽", 23, "女", "410521198902145589", "00001", "计算机应用与技术");
-//        System.out.println(a1);
-//        practice a2=new practice2("张文", 30, "男", "410521198203128847", 5, "计算机应用与技术");
-//        System.out.println(a2);
-//        practice1 a3=new practice1.test("王丽丽", 23, "女", "410521198902145589", "00001", "计算机应用与技术","fqwuhfiufirfiurhf324234");
-//        System.out.println(a3);
-//    }
 //public class practice {
 //    public String name;
 //    public int age;
