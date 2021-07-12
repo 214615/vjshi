@@ -250,16 +250,6 @@ package Automation;
 //    }
 //}
 //#################面向对象多态####################
-//##############抽象类################
-public abstract class practice {
-    public double a1,b1;
-     public practice(double a, double b){
-        this.a1=a;
-        this.b1=b;
-    }
-     public abstract double area();
-}
-//##########多态###########
 //public class practice{
 //    double a1,b1;
 //    public practice(double a,double b){
@@ -270,3 +260,12 @@ public abstract class practice {
 //        return 0;
 //    }
 //}
+//##############抽象类################
+public abstract class practice {
+    public double a1,b1;
+     public practice(double a, double b){
+        this.a1=a;
+        this.b1=b;
+    }
+     public abstract double area();
+}
