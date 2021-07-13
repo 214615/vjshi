@@ -1,2 +1,5 @@
-package Lambda;public class Calculable {
+package Lambda;
+
+public interface Calculable {
+    int calculateInt(int a,int b);
 }
