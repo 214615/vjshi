@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-@Listeners(Automation.TestNgListeners.class)
+@Listeners(TestNgListeners.class)
 public class TestNGListenersTest {
 
 

@@ -1,5 +1,7 @@
 package Automation;
-
+/**
+ * @Name：实例内部类
+ *
 public class External {
     public int a=100;
     static int b=100;
@@ -21,11 +23,13 @@ public class External {
     }
     class test1{
         External.test k=new test();
+        int a=200;
         int r=k.a1+2;
         int t=k.b1+2;
         int y=k.c1+2;
         int u=k.d1+2;
-        int i=a;
+    /**this.a:调用本身类的变量a*/
+/**        int i=this.a;
         String str3=method();
         String str4=method2();
     }
@@ -35,4 +39,100 @@ public class External {
         test1 the=new External().new test1();
         System.out.println(the.r+"\n"+the.t+"\n"+the.y+"\n"+the.u+"\n"+the.str3+"\n"+the.str4+"\n"+the.i);
     }
+}*/
+/**
+ * @Name:静态内部类
+ * */
+//public class External {
+//    int a=1;
+//    static int b=0;
+//    static class Inner{
+//        External o=new External();
+//        /**访问外部类的实例变量，必须创建实例*/
+//        int c=o.a;
+//        /**访问外部类静态变量，可以直接访问*/
+//        static int d=b;
+//    }
+//}
+//class OtherClass {
+//    External.Inner A=new External.Inner();
+//    /**访问内部类的实例变量，可通过创建的实例直接进行访问*/
+//    int j=A.c;
+//    /**访问静态内部类的静态变量，需要通过完整的类名*/
+//    int k=External.Inner.d;
+//}
+/**
+ * @Name:局部内部类
+ * @Meaning：指在一个方法中定义的内部类
+ * @Function：局部内部类只在当前方法中有效
+ * @Shortcomings：在局部内部类中只可以访问当前方法中 final 类型的参数与变量//在局部内部类中可以访问外部类的所有成员//如果方法中的成员与外部
+ * 类中的成员同名，则可以使用 <OuterClassName>.this.<MemberName> 的形式访问外部类中的成员
+ * */
+/**
+public class External {
+    int a=1;
+    int j=2;
+    public void methd(){
+        int a=0;
+        final int b=1;
+        final int c=2;
+        class Inner{
+            int a1=a;
+            int a2=b;
+            int a3=c;
+            int a4=External.this.a;
+            int a5=j;
+        }
+    }
 }
+ */
+/**
+ * @Name:匿名类
+ * @Function:匿名类和局部内部类一样，可以访问外部类的所有成员
+ * @Shortcomings:如果匿名类位于一个方法中，则匿名类只能访问方法中 final 类型的局部变量和参数
+ * */
+/**
+class Out {
+    void show() {
+        System.out.println("调用 Out 类的 show() 方法");
+    }
+}
+public class External {
+    int a=1;
+    final int b=2;
+    private void show(){
+        int i;{ // 非静态代码块
+            i=1; // 非静态代码块
+        }
+        // 在这个方法中构造一个匿名内部类
+        Out A=new Out(){
+          @Override
+          void show(){
+              System.out.println("调用了匿名类的 show() 方法"+b);
+          }
+        };
+        A.show();
+    }
+    public static void main(String[] args) {
+        External test = new External();
+        test.show();
+    }
+}
+ */
+/**
+ * @Name:Effectively final 功能
+ * */
+/**
+public class External {
+    public static void main(String[] args){
+        final String name="小邹";
+        Runnable A=new Runnable(){
+            @Override
+            public void run(){
+                System.out.println(name);
+            }
+        };
+        A.run();
+    }
+}
+ */
