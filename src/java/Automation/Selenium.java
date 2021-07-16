@@ -1,12 +1,16 @@
 package Automation;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.http.client.utils.CloneUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -130,3 +134,22 @@ public class Selenium {
         }
     }
 }
+/**
+ * @param :admin
+ * Selenium+Map
+ * put(K key,V value) :向Map中追加数据
+ * get(Obiect key) :根据key获取对应的value值，没有返回null
+ * Set<Integer> set = map.keySet(); :获取所有Key，key不能重复
+ * Collection<String> value=map.values(); :获取所有value值，可以重复
+ * map1.putAll(map2); :相同的key，map1中的key-value会被覆盖；不同的key，map2中的key-value会被追加到map1
+ * map1=map2； ：map1中的key-value都会被map2中的key-value覆盖
+ * */
+/**
+ * @param :admin
+ * elementToBeClickable(By locator):页面元素是否在页面上可用和可被单击
+ * elementToBeSelected(WebElement element):页面元素处于被选中状态
+ * presenceOfElementLocated(By locator):页面元素在页面中存在
+ * textToBePresentInElement(By locator):在页面元素中是否包含特定的文本
+ * textToBePresentInElementValue(By locator, java.lang.String text):页面元素值
+ * titleContains(java.lang.String title):标题 (title)
+ * */

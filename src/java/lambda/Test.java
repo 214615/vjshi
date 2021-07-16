@@ -1,4 +1,4 @@
-package Lambda;
+package lambda;
 
 /**
  * @Name:Lambda表达式

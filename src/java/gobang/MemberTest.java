@@ -1,4 +1,4 @@
-package Gobang;
+package gobang;
 ///**
 // * @author :user
 // * @createDate :2021/6/22

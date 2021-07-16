@@ -1,12 +1,8 @@
-package Gobang;
+package gobang;
 
 import Automation.Rectangle;
 import Automation.Triangle;
 import Automation.practice;
-
-import javax.swing.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 //public class Test {
 //    public static void main(String[] args) {
