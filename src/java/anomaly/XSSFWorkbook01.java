@@ -98,6 +98,7 @@ public class XSSFWorkbook01 {
             }
         }
         try{
+            //用输出流写到excel
             xssfWorkbook.write(outputStream);
             //清空缓存
             outputStream.flush();
@@ -106,5 +107,25 @@ public class XSSFWorkbook01 {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+    /**
+     * 把一个Map中的所有键和值分别放到一个list中，再把这两个list整个放到一个大的list里面*/
+    public static List<List> convertMapToList(Map map){
+        //ArrayList动态数组，增加、减少元素
+        List<List> list=new ArrayList<List>();
+        //LinkedList生成空的列表
+        List<String> key=new LinkedList<String>();
+        List<String> vlaue=new LinkedList<String>();
+        Set<Map.Entry<String,String>> set=map.entrySet();
+        Iterator<Map.Entry<String,String>> iter=set.iterator();
+        while (iter.hasNext()){
+            key.add(iter.next().getKey());
+        }list.add(key);
+        Collection<String> value= map.values();
+        Iterator<String> iter1=value.iterator();
+        while (iter1.hasNext()){
+            value.add(iter1.next());
+        }list.add(vlaue);
+        return list;
     }
 }

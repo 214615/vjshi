@@ -5,13 +5,13 @@
     <parameter name="param1" value="名字"/>
     <parameter name="param2" value="邹建平"/>
     <classes>
-      <class name="Automation.testng">
+      <class name="automation.testng">
         <methods>
           <include name="str"/>
           <include name="dj"/>
           <include name="ser"/>
         </methods>
-      </class> <!-- Automation.testng -->
+      </class> <!-- automation.testng -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

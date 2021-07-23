@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 //#########get请求##############
 //public class SimpleClient {
 //    @Test

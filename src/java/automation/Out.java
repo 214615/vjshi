@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 
 public class Out{
     void show(){

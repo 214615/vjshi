@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 
 //public class practice {
 //    @Test
@@ -119,14 +119,6 @@ package Automation;
 //    public String toString() {
 //        return "姓名：" + name + "\n年龄：" + age + "\n性别：" + sex + "\n身份证号：" + sn;
 //    }
-
-import jdk.nashorn.internal.runtime.JSONListAdapter;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.util.Map;
-import java.util.Set;
 
 //    public void eat() {
 //        System.out.println(name);

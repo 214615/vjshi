@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 public class Rectangle extends practice{
     public Rectangle(double a,double b){
         super(a,b);

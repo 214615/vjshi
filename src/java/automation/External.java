@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 /**
  * @Name：实例内部类
  * @param :实例内部类是指没有用 static 修饰的内部类，有的地方也称为非静态内部类

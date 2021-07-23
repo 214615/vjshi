@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 public class Triangle extends practice{
     public Triangle(double a,double b){
         super(a,b);

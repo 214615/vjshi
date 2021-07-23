@@ -1,8 +1,8 @@
 package gobang;
 
-import Automation.Rectangle;
-import Automation.Triangle;
-import Automation.practice;
+import automation.Rectangle;
+import automation.Triangle;
+import automation.practice;
 
 //public class Test {
 //    public static void main(String[] args) {

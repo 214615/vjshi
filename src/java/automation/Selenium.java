@@ -1,16 +1,12 @@
-package Automation;
+package automation;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.http.client.utils.CloneUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 

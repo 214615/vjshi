@@ -1,4 +1,4 @@
-package Automation;
+package automation;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
