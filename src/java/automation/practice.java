@@ -120,6 +120,14 @@ package automation;
 //        return "姓名：" + name + "\n年龄：" + age + "\n性别：" + sex + "\n身份证号：" + sn;
 //    }
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import javax.swing.*;
+import java.util.List;
+import java.util.WeakHashMap;
+
 //    public void eat() {
 //        System.out.println(name);
 //    }
@@ -261,11 +269,20 @@ package automation;
 //    }
 //}
 //##############抽象类################
-public abstract class practice {
-    public double a1,b1;
-     public practice(double a, double b){
-        this.a1=a;
-        this.b1=b;
+//public abstract class practice {
+//    public double a1,b1;
+//     public practice(double a, double b){
+//        this.a1=a;
+//        this.b1=b;
+//    }
+//     public abstract double area();
+//}
+//自定义异常类
+public class practice extends Exception{
+    public practice(){
+        super();
     }
-     public abstract double area();
+    public practice(String s){
+        super(s);
+    }
 }

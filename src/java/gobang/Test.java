@@ -1,6 +1,6 @@
 package gobang;
 
-import automation.Rectangle;
+
 import automation.Triangle;
 import automation.practice;
 
@@ -41,12 +41,12 @@ import automation.practice;
 //        }else{
 //            JOptionPane.showMessageDialog(mf,"请重新输入！");
 //        }
-public class Test {
-    public static void main(String[] args){
-        practice age;
-        age=new Rectangle(1.7,1.5);
-        System.out.println(age.area());
-        age=new Triangle(10,10);
-        System.out.println(age.area());
-    }
-}
+//public class Test {
+//    public static void main(String[] args){
+//        practice age;
+//        age=new Rectangle(1.7,1.5);
+//        System.out.println(age.area());
+//        age=new Triangle(10,10);
+//        System.out.println(age.area());
+//    }
+//}

@@ -142,3 +142,36 @@ public class External {
     }
 }
 */
+//假设在某仓库管理系统的登录界面中需要输入用户名和密码，其中用户名只能由 6~10 位数字组成，密码只能有 6 位，任何不符合用户名或者密码要求的情况都视为异常，并且需要捕获并处理该异常
+public class External {
+    public boolean validateLogin(String username,String password){
+         boolean con=false;
+         boolean conUname=false;
+         try{
+             if (username.length() >= 6 && username.length() <= 10) {
+                 for(int i=0;i<username.length();i++){
+                     char cha=username.charAt(i);//charAt(i)获取字符串中每个字符
+                     if (cha>='0'&&cha<='9'){
+                         conUname=true;
+                     }else {
+                         conUname=false;
+                         throw new practice("用户名中包含有非数字的字符！");
+                     }
+                 }
+             }else {
+                 throw new practice("用户名长度必须在6〜10位之间！");
+             }
+             if (conUname) {
+                 if (password.length() == 6) {
+                     con = true;
+                 } else {
+                     con = false;
+                     throw new practice("密码长度必须为 6 位！");
+                 }
+             }
+         }catch (practice e){
+             System.out.println(e.getMessage());
+         }
+         return con;
+    }
+}
