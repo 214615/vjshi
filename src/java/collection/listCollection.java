@@ -1,9 +1,8 @@
 package collection;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import org.apache.poi.util.SystemOutLogger;
+
+import java.util.*;
 
 public class listCollection {
     public static void main(String[] args) {
@@ -70,5 +69,23 @@ public class listCollection {
         System.out.println(linkedList.getFirst());
         System.out.println(linkedList.getLast());
         System.out.println(linkedList);
+        //使用 HashSet 创建一个 Set 集合，并向该集合中添加 4 套教程
+        //Set()集合不存在重复的元素
+        HashSet<String> hashSet=new HashSet<String>();
+        String cours1="Java入门教程";
+        String cours2="Python基础教程";
+        String cours3="C语言学习教程";
+        String cours4="Golang入门教程";
+        hashSet.add(cours1);
+        hashSet.add(cours2);
+        hashSet.add(cours3);
+        hashSet.add(cours4);
+        /*for (String cours:hashSet){
+            System.out.println("《" +cours + "》");
+        }*/
+        Iterator it= hashSet.iterator();
+        while (it.hasNext()){
+            System.out.println("《"+it.next()+"》");
+        }
     }
 }
