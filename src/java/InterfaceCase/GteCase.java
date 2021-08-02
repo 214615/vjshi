@@ -1,9 +1,7 @@
 package InterfaceCase;
 
 import javax.print.DocFlavor;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -17,6 +15,7 @@ public class GteCase {
             String urlNameString=url+"?"+param;
             URL reaUrl=new URL(urlNameString);
             //打开和url直接的连接
+            //通过调用URL对象openConnection()方法来创建URLConnection对象
             URLConnection connection= reaUrl.openConnection();
             //设置通用的请求属性
             connection.setRequestProperty("","");
@@ -46,7 +45,7 @@ public class GteCase {
         }
         return result;
     }
-    public static String sendPost(String url,String param) throws Exception{
+    public static String sendPost(String url,String param) throws Exception {
         PrintWriter out=null;
         BufferedReader in=null;
         String result="";
@@ -60,7 +59,7 @@ public class GteCase {
             connection.setDoOutput(true);
             connection.setDoInput(true);
             // 获取URLConnection对象对应的输出流
-            out =new PrintWriter(connection.getInputStream());
+            out =new PrintWriter(connection.getOutputStream());
             // 发送请求参数
             out.print(param);
             //输出流的缓冲
